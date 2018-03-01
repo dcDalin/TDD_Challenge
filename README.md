@@ -15,7 +15,7 @@ $ git clone https://github.com/dcDalin/TDD_Challenge.git
 ```
 
 ```sh
-$ pip install -r requirements.txt
+$ cd TDD_Challenge.git
 ```
 #### Dependencies
 Project depends on [Python](https://www.python.org/downloads/) and [pip](https://pip.pypa.io/en/stable/reference/pip_download/).
@@ -26,7 +26,7 @@ Project depends on [Python](https://www.python.org/downloads/) and [pip](https:/
 ```sh
 # in the project root directory
 
-$ pip install -r requirements.txt
+$ pytest
 ```
 
 ## Author
