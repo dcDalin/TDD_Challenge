@@ -1,32 +1,19 @@
 class PhoneBook:
+    
 
-
-    def __init__(self, contact_id = 1, contact_name = 'DC Dalin', contact_phone = '0712345678'):
-        self.contact_id = contact_id
-        self.contact_name = contact_name
-        self.contact_phone = contact_phone
-
+    def __init__(self):
+        '''Constructor method, will have a list of dictionaries i.e. phone numbers'''
         self.contacts = []
-        self.me = {'id': contact_id, 'name': contact_name, 'phone': contact_phone}
-        self.contacts.append(self.me)
 
-    def all_contacts(self):
-        return self.contacts
-
-    def add_contact(self):
+    def add_contact(self, contact_name, contact_phone, contact_id = '1'):
+        '''instance variables, automatically add the next id to the next contact'''
         pass
 
-    def show_contact(self):
+    def search_contact(self, search_contact):
         pass
 
-    def edit_contact(self):
+    def edit_phone_number(self, contact_name, new_phone_number):
         pass
 
-    def delete_contact(self):
+    def delete_contact(self, contact_name):
         pass
-
-        
-
-user_1 = PhoneBook()
-
-print(user_1.all_contacts())
