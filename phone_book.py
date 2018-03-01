@@ -9,14 +9,14 @@ class PhoneBook:
         '''Search for contacts'''
         result = [element for element in self.contacts if element['name'] == search_contact]
         if result == []:
-            return 'contact not found'
+            return False
         return result
     
     def search_contact_phone(self, search_contact):
         '''Search for contacts'''
         result = [element for element in self.contacts if element['phone'] == search_contact]
         if result == []:
-            return 'contact not found'
+            return False
         return result
 
     def phone_number_exists(self, search_phone_number):
@@ -54,11 +54,20 @@ class PhoneBook:
         return self.contacts
 
     def edit_phone_number(self, contact_name, new_phone_number):
-        contact_to_edit = self.search_contact_name(contact_name)
-        contact_to_edit[0]['phone'] = new_phone_number
-        return contact_to_edit
+        if self.search_contact_phone:
+            contact_to_edit = self.search_contact_name(contact_name)
+            contact_to_edit[0]['phone'] = new_phone_number
+            return contact_to_edit
+        return 'Contact does not exist'
 
     def delete_contact(self, contact_name):
         contact_to_delete = self.search_contact_name(contact_name)
         del contact_to_delete[0]
         return 'contact deleted'
+
+user = PhoneBook()
+
+user.add_contact('dalo', 838238382)
+user.add_contact('maggie', 238383283)
+
+print(user.delete_contact('dalo'))

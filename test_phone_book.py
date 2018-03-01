@@ -49,7 +49,7 @@ class TestPhoneBook(unittest.TestCase):
         self.initPhoneBook.add_contact('Mwangi', 712876245)
 
         response = self.initPhoneBook.search_contact_name('Mwangi')
-        self.assertEqual(response, [{'id': 2, 'name': 'Mwangi', 'phone': 712876245}])
+        self.assertTrue(response)
 
     def test_search_contact_phone(self):
         '''Create some contacts before we search for them'''
@@ -65,7 +65,7 @@ class TestPhoneBook(unittest.TestCase):
         self.initPhoneBook.add_contact('Mwangi', 712876245)
 
         response = self.initPhoneBook.search_contact_name('Nancy')
-        self.assertEqual(response, 'contact not found')
+        self.assertFalse(response)
 
     def test_edit_phone_number(self):
         '''
