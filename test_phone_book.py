@@ -63,7 +63,7 @@ class TestPhoneBook(unittest.TestCase):
         '''Create some contacts before we search for them'''
         self.initPhoneBook.add_contact('Mike', 712872452)
         self.initPhoneBook.add_contact('Mwangi', 712876245)
-
+ 
         response = self.initPhoneBook.search_contact_name('Nancy')
         self.assertFalse(response)
 

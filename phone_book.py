@@ -62,7 +62,7 @@ class PhoneBook:
             return contact_to_edit
         return 'Contact does not exist'
 
-    def delete_contact(self, contact_search_contact_phonename):
+    def delete_contact(self, contact_name):
         contact_to_delete = self.search_contact_name(contact_name)
         del contact_to_delete[0]
         return 'contact deleted'
